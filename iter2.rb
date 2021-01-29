@@ -23,5 +23,4 @@ def hash_ventas(meses)#defino mi metodo y le doy de argumento meses para
     end  
 end
 
-
 hash_ventas(meses)
