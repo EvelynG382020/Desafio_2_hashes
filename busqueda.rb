@@ -1,9 +1,11 @@
-#crear un metodo que busque a qué mes pertenece una o mas
-#cifras específica. En caso de no encontrarlo mostrar
-#el mensaje "no encontrado"
+=begin
+crear un metodo que busque a qué mes pertenece una o mas
+cifras específica. En caso de no encontrarlo mostrar
+el mensaje "no encontrado"
 
-#Se evalúa la salida en pantalla por lo que se debe respetar los mensajes.
-#Se evaluará con un hash distinto al mostrado.
+Se evalúa la salida en pantalla por lo que se debe respetar los mensajes.
+Se evaluará con un hash distinto al mostrado.
+=end
 
 #ruby busqueda.rb 15000 31000 21700
 ventas = {

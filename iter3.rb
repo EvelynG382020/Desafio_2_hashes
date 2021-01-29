@@ -7,7 +7,7 @@ def filter(hash, value)#metodo y de argumento el hash y el valor
         #mi nuevo archivo desde clave que será igual al valor, si el valor
         #es mayor o igual al valor ingresado, mostrar los valores del nuevo hash filtrado
         end
-    return new_hash_value
+    new_hash_value
 end
 
 

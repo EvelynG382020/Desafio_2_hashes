@@ -1,26 +1,44 @@
-#se pide generar un hash llamado quarters con las venta de 
-#cada trimestre a partir del hash de ventas.
-#las claves del hash tiene que ser 'Q1', Q2', 'Q3', 'Q4'
+=begin
+se pide generar un hash llamado quarters con las venta de 
+cada trimestre a partir del hash de ventas.
+las claves del hash tiene que ser 'Q1', Q2', 'Q3', 'Q4'
 
-#Los valores ingresados serán distintos
-#Es un ejercicio de arrays o de hashes ¿Se necesitan los keys?
-#Revisar la documentación del método .each_slice
-#Necesitamos iterar elementos, o elementos con índices
+Los valores ingresados serán distintos
+Es un ejercicio de arrays o de hashes ¿Se necesitan los keys?
+Revisar la documentación del método .each_slice
+Necesitamos iterar elementos, o elementos con índices
+=end
+
+ventas = {
+    Enero: 15000,
+    Febrero: 22000,
+    Marzo: 12000,
+    Abril: 17000,
+    Mayo: 81000,
+    Junio: 13000,
+    Julio: 21000,
+    Agosto: 41200,
+    Septiembre: 25000,
+    Octubre: 21500,
+    Noviembre: 91000,
+    Diciembre: 21000
+}
 
 ventas_trimestrales = []
 i = 0
-
-ventas.each do |trimestre|
+ventas.each_slice(3) do |trimestre|
     hash_quarters = trimestre.to_h
     valores_trimestrales = hash_quarters.values #values retorna nuevo array con los valores desde el hash
-    ventas_trimestrales[i] = ventas_trimestrales.inject(0) {|suma, venta| suma+venta}
-    #Si especifico un bloque, entonces para cada elemento en enum, el bloque se pasa un valor acumulador 
+    ventas_trimestrales[i] = valores_trimestrales.inject(0) {|suma, venta| suma+venta}
+    #Aquí se define cuánto fue la venta de cada trimestre, sumando la venta de cada mes que compone un trimestre
     i += 1
 end
 
 
-quarters = ["Q1", "Q2", "Q3", "Q4"] (ventas_trimestrales).to_h    
-print quarters
+quarters = ["Q1", "Q2", "Q3", "Q4"].zip(ventas_trimestrales).to_h    
+##Con el método zip se juntan las keys y los valores calculados más arriba y se convierte en un hash
+
+puts quarters
 
 
 
