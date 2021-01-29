@@ -14,13 +14,13 @@ ventas = {
     Diciembre: 21000
 }
 
-def months(hash_ventas)#defino mi metodo y le doy de argumento meses para 
+def months(sales)#defino mi metodo y le doy de argumento meses para 
     #acordarme que me piden mostrar los meses de las ventas mas altas
-    hash_ventas.each do |k,v|#itero meses dentro de mis hash clave y valor
+    sales.each do |k,v|#itero meses dentro de mis hash clave y valor
         if v > 45000 #y condiciono que si los valores sobre 45000
-            print "#{k}" #me muestre los meses cuyas ventas fueron sobre 45000
+            print "#{k} " #me muestre los meses cuyas ventas fueron sobre 45000
         end
     end  
 end
 
-months(hash_ventas)
+months(ventas)
