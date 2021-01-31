@@ -5,9 +5,9 @@ def filter(hash, value)#metodo y de argumento el hash y el valor
     hash.each do |k,v| #iterar el hash
         new_hash_value[k] = v if v >= value 
         #mi nuevo archivo desde clave que será igual al valor, si el valor
-        #es mayor o igual al valor ingresado, mostrar los valores del nuevo hash filtrado
+        #es mayor o igual al valor ingresado por ususario 
         end
-    new_hash_value
+    new_hash_value #mostrar los valores del nuevo hash filtrado
 end
 
 
@@ -28,3 +28,8 @@ ventas = {
 }
 
 print filter(ventas, ARGV[0].to_i)
+#imprimo el llamado al método pasándole de argumentos las ventas
+#y como segundo argumento el ingresado por el usuario
+#y arriba lo recibe el método lo itera y se condiciona si el valor ingresado
+#por el usuario es es menor a los valores del hash de ventas
+#se guardarán en el nuevo hash solo los valores mayores 

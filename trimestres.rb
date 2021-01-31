@@ -24,10 +24,10 @@ ventas = {
     Diciembre: 21000
 }
 
-ventas_trimestrales = []
-i = 0
-ventas.each_slice(3) do |trimestre|
-    hash_quarters = trimestre.to_h
+ventas_trimestrales = []#creo mi variable vacío 
+i = 0 
+ventas.each_slice(3) do |trimestre|#las ventas se va a iterar y ordenar en 3 bloques
+    hash_quarters = trimestre.to_h #mi variable será mi trimestre iterado convertido en hash
     valores_trimestrales = hash_quarters.values #values retorna nuevo array con los valores desde el hash
     ventas_trimestrales[i] = valores_trimestrales.inject(0) {|suma, venta| suma+venta}
     #Aquí se define cuánto fue la venta de cada trimestre, sumando la venta de cada mes que compone un trimestre
